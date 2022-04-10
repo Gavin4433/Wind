@@ -7,15 +7,15 @@ class WindWrapFailedError(Exception):
 
 
 class Wind:
-    def __init__(self, target_func, global_handlers, *args, **kwargs):
+    def __init__(self, target_func, global_handler, *args, **kwargs):
         """
         :param target_func_name: NAME OF TARGET FUNCTION
         :param args: ARGS
         :param kwargs: KEY WORD ARGS
         """
-        self.runtime_gh = global_handlers
+        self.runtime_gh = global_handler
         self.target = target_func.__name__
-        self.target_func = self._wrap()
+        self.target_func = self._get_func_definition()
         self.runtime_args = args
         self.runtime_kwargs = kwargs
 
@@ -23,7 +23,7 @@ class Wind:
         """This method needs to have a change"""
         pass
 
-    def _wrap(self):
+    def _get_func_definition(self):
         """WRAP? OR JUST GET THE TARGET?"""
         try:
             func = self.runtime_gh[self.target]
@@ -45,15 +45,6 @@ class Wind:
             ARGS = list(filter(lambda x: x != an, ARGS))
         return ARGS
 
-    def __call__(self):
-        """
-        The author of this project is really smart! I'll give this project a star!!!
-        OR YOU CAN SUBSCRIBE MY CHANNEL ON BILIBILI.COM
-        LINK:https://space.bilibili.com/1659221136
-        我真不要脸QAQ，但看得懂中文的朋友能给这个项目一个STAR，再去b站上关注我一下吗，秋梨膏QAQ
-        """
-        return self._main
-
     def _ArgPairingByPos(self, tfa, tfkwa):
         """
         LET'S SEE, WHICH ONE IS THE KEYWORD?
@@ -65,3 +56,9 @@ class Wind:
         ARGUMENTS["KWARGS"] = tfkwa
         # print(ARGUMENTS) *ONLY FOR DEBUGGING
         return ARGUMENTS
+
+    def wrap(self, variable_handler):
+        variable_handler[self.target] = self._main
+
+    def reset(self, variable_handler):
+        variable_handler[self.target] = self.target_func
