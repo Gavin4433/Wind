@@ -1,3 +1,10 @@
+[![pypi](https://img.shields.io/pypi/v/WIND-liang233.svg)][![pypi](https://img.shields.io/pypi/pyversions/WIND-liang233.svg)]
+
+#How To Install 
+```commandline
+pip install WIND-liang233
+```
+
 #Wind Is Not a Decorator
 A dynamic decorator? Maybe...
 
