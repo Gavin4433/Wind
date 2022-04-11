@@ -1,5 +1,5 @@
 
-[![pypi](https://img.shields.io/pypi/v/Wind-is-not-decorator.svg)][![pypi](https://img.shields.io/pypi/pyversions/Wind-is-not-decorator.svg)]![pypi](https://img.shields.io/pypi/v/WIND-liang233.svg)![pypi](https://img.shields.io/pypi/pyversions/WIND-liang233.svg)
+![pypi](https://img.shields.io/pypi/v/Wind-is-not-decorator.svg)![pypi](https://img.shields.io/pypi/pyversions/Wind-is-not-decorator.svg)
 
 # How To Install 
 ```commandline
