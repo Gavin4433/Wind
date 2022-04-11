@@ -57,8 +57,8 @@ class Wind:
         # print(ARGUMENTS) *ONLY FOR DEBUGGING
         return ARGUMENTS
 
-    def wrap(self, variable_handler):
-        variable_handler[self.target] = self._main
+    def wrap(self):
+        self.runtime_gh[self.target] = self._main
 
-    def reset(self, variable_handler):
-        variable_handler[self.target] = self.target_func
+    def reset(self):
+        self.runtime_gh[self.target] = self.target_func

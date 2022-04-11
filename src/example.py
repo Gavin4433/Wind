@@ -31,18 +31,18 @@ def liang(string, string2):
 
 # The First Wrap
 a = WRAPPER(liang, globals())
-a.wrap(vars())
+a.wrap()
 liang("HELLO", "MR.liang")
 
 # RESET THE FUNCTION
-a.reset(vars())
+a.reset()
 print()
 
 # The Second Wrap
 b = WRAPPER2(liang, globals())
-b.wrap(vars())
+b.wrap()
 liang("HELLO", "MR.liang")
-b.reset(vars())
+b.reset()
 
 
 class GET_ARGS(Wind.Wind):
@@ -54,5 +54,5 @@ class GET_ARGS(Wind.Wind):
 
 
 c = GET_ARGS(liang, globals())
-c.wrap(vars())
+c.wrap()
 liang("HELLO", "MR.liang")

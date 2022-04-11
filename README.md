@@ -1,4 +1,4 @@
-[![pypi](https://img.shields.io/pypi/v/WIND-liang233.svg)][![pypi](https://img.shields.io/pypi/pyversions/WIND-liang233.svg)]
+[![pypi](https://img.shields.io/pypi/v/Wind-is-not-decorator.svg)][![pypi](https://img.shields.io/pypi/pyversions/Wind-is-not-decorator.svg)]
 
 #How To Install 
 ```commandline
@@ -49,18 +49,18 @@ def liang(string, string2):
 
 # The First Wrap
 a = WRAPPER(liang, globals())
-a.wrap(vars())
+a.wrap()
 liang("HELLO", "MR.liang")
 
 # RESET THE FUNCTION
-a.reset(vars())
+a.reset()
 print()
 
 # The Second Wrap
 b = WRAPPER2(liang, globals())
-b.wrap(vars())
+b.wrap()
 liang("HELLO", "MR.liang")
-b.reset(vars())
+b.reset()
 ```
 And We Get These Outputs:
 ```
@@ -86,7 +86,7 @@ class GET_ARGS(Wind.Wind):
         print(args_dict)
         
 c = GET_ARGS(liang, globals())
-c.wrap(vars())
+c.wrap()
 liang("HELLO", "MR.liang")
 
 ```
